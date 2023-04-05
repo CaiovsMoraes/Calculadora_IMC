@@ -85,7 +85,6 @@
 </head>
 <body>
    <p class="line typing-animation cabeçalho">Moraes Enterprise</p>
-
    <div class="container"> 
     <div class="first-step">
         <p>Clique no botão para calcular o seu IMC</p>
@@ -108,6 +107,13 @@
         <p id="resultado"></p>
         <button onclick="go(3,2)">Calcular Novamente</button>
         <button onclick="go(3,1)">Finalizar</button>
+        <div>
+        <br>
+            <center>
+        <img src="https://falesaude.com/wp-content/uploads/2021/01/tabela-imc-1-728x381.webp"
+   width="270px" height="200px" margin: 0 auto left: 20% >
+        </center>
+        </div>
     </div>
    </div>
 </body>
@@ -182,25 +188,31 @@
                 result.innerHTML = ('Magreza | Obesidade: 0 ');
                 
             }
-            else if (imc >= 18.5 && imc < 25)
+            else if (imc >= 18.5 && imc < 24.9)
             {
                 console.log('Normal | Obesidade: 0 '); 
                 result.style.color = 'green';
                 result.innerHTML = 'Normal | Obesidade: 0 ';
                 
             }
-            else if(imc >= 25 && imc < 30)
+            else if(imc >= 25 && imc < 29.9)
             {
-                console.log('Sobrepeso | Obesidade: I ');
+                console.log('Sobrepeso | Obesidade: 0 ');
                 result.style.color = 'orange';
-                result.innerHTML = 'Sobrepeso | Obesidade: I ';
+                result.innerHTML = 'Sobrepeso | Obesidade: 0 ';
             }
-            else if(imc >= 30 && imc < 40)
+            else if(imc >= 30 && imc < 34.9)
+            {
+                console.log('Obesidade | Obesidade: I ');
+                result.style.color = 'red';
+                result.innerHTML = 'Obesidade | Obesidade: I ';
+            }
+            else if(imc >= 35 && imc < 49.9)
             {
                 console.log('Obesidade | Obesidade: II ');
-                result.style.color = 'red';
+                result.style.color = 'gray';
                 result.innerHTML = 'Obesidade | Obesidade: II ';
-            }
+            }   
             else
             {
                 console.log('Obesidade Grave | Obesidade: III ');
